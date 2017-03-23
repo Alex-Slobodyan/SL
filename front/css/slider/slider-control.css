@@ -1,0 +1,41 @@
+.slider-control {
+    border-top: 1px solid color(white alpha(40%));
+    font-family: 'Roboto';
+    font-weight: 300;
+    
+    &__item {
+        padding: 10px 0;
+        color: var(--text-not-active-color);
+        transition: all var(--second-one);
+        position: relative;
+
+        &::before {
+            content: "";
+            height: 0px;
+            background: white;
+            display: inline-block;
+            width: 0;
+            position: absolute;
+            top: -3px;
+            left: 0;
+            right: 0;
+            transition: width var(--slide-second);
+            margin: 0 auto;
+        }
+
+        &:hover {
+            font-weight: normal;
+            color: white;
+        }
+
+        &--showing {
+            font-weight: normal;
+            color: white;
+
+            &::before {
+                height: 3px;
+                width: 100%;
+            }
+        }
+    }
+}

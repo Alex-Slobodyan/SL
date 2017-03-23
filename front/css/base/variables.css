@@ -1,0 +1,14 @@
+:root {
+    --body-color:               #074261;
+    --circle-color:             #FF3546;
+    --btn-circle-color:         #EE7A30;
+    --btn-search-color:         #3D5ED8;
+    --text-not-active-color:    #6A8192;
+    --text-input-color:         #808080;
+
+    --font-large: 1.25em;
+    --font-small: 0.875em;
+    --add-icon-size: 17px;
+    --second-one: 1s;
+    --slide-second: calc(var(--second-one) / 2)
+}

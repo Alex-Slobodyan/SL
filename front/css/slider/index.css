@@ -1,0 +1,10 @@
+@import "./slider-content";
+@import "./slider-control";
+
+
+.slider {
+
+    & img {
+        width: 100%;
+    }
+}

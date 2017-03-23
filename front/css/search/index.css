@@ -1,0 +1,41 @@
+.search {
+    padding: 20px 0 0;
+    display: flex;
+
+    &__item {
+        height: 45px;
+        margin-right: 10px;
+        padding: 0 15px;
+        color: var(--text-input-color);
+        font-family: 'Roboto';
+        font-weight: 300;
+        box-sizing: border-box;
+
+        &--text {
+            flex: 1 0 auto;
+        }
+
+        &--date {
+            width: 120px;
+            background: inline('calendar.png') white no-repeat 10px 50%;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+
+        &--map {
+            width: 185px;
+            cursor: pointer;
+            background: inline('placeholder.png') white no-repeat 10px 50%;
+            padding-left: 35px;
+            cursor: pointer;
+        }
+
+        &--btn {
+            margin-right: 0;
+            background: var(--btn-search-color);
+            color: white;
+            width: 260px;
+            font-weight: bold;
+        }
+    }
+}

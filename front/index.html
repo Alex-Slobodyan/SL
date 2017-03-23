@@ -1,0 +1,43 @@
+<!DOCTYPE HTML> 
+<html>
+<head>
+<title>События</title>
+<meta http-equiv="X-UA-Compatible" content="IE=8">
+</head>
+<body>
+  <section class="wrapper">
+    <article class="content">
+      <div class="row">
+        <h1 class="title row__item">События</h1>
+        <button class="add-event row__item">Добавить</button>
+      </div>
+      <div class="search">
+        <input type="text" class="search__item search__item--text" placeholder="Место, объект, название, тематика, активность">
+        <input type="text" class="search__item search__item--date" readonly value="Дата">
+        <input type="text" class="search__item search__item--map" readonly value="Ивано-Франковск">
+        <button class="search__item search__item--btn">Найти</button>
+      </div>
+    </article>
+    <div class="slider">
+      <div class="slider-content">
+        <button class="slider-content__nav slider-content__nav--left"></button>
+        <div class="slider-content__item slider-content__item--showing slider-content__item--hide">
+          <img src="http://rcysl.com/wp-content/uploads/2017/02/Wide-Image-Hd-.jpg" alt="">
+        </div>
+        <div class="slider-content__item">
+          <img src="https://s-media-cache-ak0.pinimg.com/originals/b1/29/21/b129218ba1acc4dea54a75050587b15a.jpg" alt="">
+        </div>
+        <div class="slider-content__item">
+          <img src="http://wallpapers-images.ru/2560x1600/games/wallpapers/games-wallpapers-2560x1600-00020.jpg" alt="">
+        </div>
+        <button class="slider-content__nav slider-content__nav--right"></button>
+      </div>
+      <div class="slider-control content row">
+        <button class="slider-control__item slider-control__item--showing row__item--full" data-currentSlide="0">Январь</button>
+        <button class="slider-control__item row__item--full" data-currentSlide="1">Февраль</button>
+        <button class="slider-control__item row__item--full" data-currentSlide="2">Март</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

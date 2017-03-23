@@ -1,0 +1,9 @@
+.title {
+    font-size: var(--font-large);
+    color: white;
+    font-weight: bold;
+
+    &--top {
+        float: left;
+    }
+}
