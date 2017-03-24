@@ -14,29 +14,24 @@ const   slides          = $getAll('.slider-content__item'),
 
 let currentSlide = 0;
 
-const removeClassItem = (item) => {
-    slides[item].classList.remove(class_name.slide);
-    controls[item].classList.remove(class_name.control);
-};
-
-const addClassItem = (item) => {
-    slides[item].classList.add(class_name.slide);
-    controls[item].classList.add(class_name.control);
+const toggleClassItem = (item) => {
+    slides[item].classList.toggle(class_name.slide);
+    controls[item].classList.toggle(class_name.control);
 };
 
 slider_control.addEventListener('click', ({target}) => {
     if (has_class(target, 'slider-control__item')) {
-        removeClassItem(currentSlide);
+        toggleClassItem(currentSlide);
         currentSlide = target.getAttribute('data-currentSlide');
-        addClassItem(currentSlide);
+        toggleClassItem(currentSlide);
     };
 });
 
 slider_content.addEventListener('click', ({target}) => {
     if(has_class(target, 'slider-content__nav--right')) {
-        removeClassItem(currentSlide);
+        toggleClassItem(currentSlide);
         currentSlide = (currentSlide+1)%slides.length;
-        addClassItem(currentSlide);
+        toggleClassItem(currentSlide);
 
     }
 });
@@ -44,13 +39,13 @@ slider_content.addEventListener('click', ({target}) => {
 slider_content.addEventListener('click', ({target}) => {
     if(has_class(target, 'slider-content__nav--left')) {
         if(currentSlide == 0) {
-            removeClassItem(currentSlide);
+            toggleClassItem(currentSlide);
             currentSlide = slides.length - 1;
-            addClassItem(currentSlide);
+            toggleClassItem(currentSlide);
         } else {
-            removeClassItem(currentSlide);
+            toggleClassItem(currentSlide);
             currentSlide = (currentSlide-1)%slides.length;
-            addClassItem(currentSlide);
+            toggleClassItem(currentSlide);
         }        
     }
 })
